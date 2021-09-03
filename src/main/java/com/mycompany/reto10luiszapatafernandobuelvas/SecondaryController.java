@@ -41,13 +41,16 @@ public class SecondaryController {
 
 
     @FXML
-    private void hacerCalculo(ActionEvent event) {
-        
+    private void hacerCalculo(ActionEvent event) {             
         // Obtener dato del TextFieldd
-        
-       
-            miEsfera.setR(Double.parseDouble(inputRadio.getText())); 
-
+            try
+            {
+                miEsfera.setR(Double.parseDouble(inputRadio.getText())); 
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Ingrese un valor valido en el campo");
+            }
         
         // Uso de fórmulas
         
