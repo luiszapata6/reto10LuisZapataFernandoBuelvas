@@ -45,11 +45,9 @@ public class SecondaryController {
         
         // Obtener dato del TextFieldd
         
-        if(Double.parseDouble(inputRadio.getText()) < 0 || !inputRadio.getText().isEmpty() ){
-            
-        } else{
+       
             miEsfera.setR(Double.parseDouble(inputRadio.getText())); 
-        }
+
         
         // Uso de fórmulas
         
