@@ -43,7 +43,16 @@ public class SecondaryController {
     @FXML
     private void hacerCalculo(ActionEvent event) {
         
-        miEsfera.setR(Double.parseDouble(inputRadio.getText()));
+        // Obtener dato del TextFieldd
+        
+        if(Double.parseDouble(inputRadio.getText()) < 0 || !inputRadio.getText().isEmpty() ){
+            
+        } else{
+            miEsfera.setR(Double.parseDouble(inputRadio.getText())); 
+        }
+        
+        // Uso de fórmulas
+        
         volumenEsfera.setText(miEsfera.volumen().toString());
         superficieEsfera.setText(miEsfera.superficie().toString());
         areaCirculo.setText(miEsfera.areaCirculo().toString());
